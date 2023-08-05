@@ -47,6 +47,29 @@
             padding: 1rem;
         }
 
+.custom-button {
+  background: linear-gradient(to bottom, #4CAF50, #45a049);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-button:hover {
+  background: linear-gradient(to bottom, #45a049, #4CAF50);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+
 /*懸浮小t聊天機器人*/
         /* 懸浮按鈕樣式 */
         .chat-icon {
@@ -131,11 +154,11 @@
 <main>
         <h2>歡迎來到大樹老師的教學網站</h2>
         <p>(這是由大樹老師自己製作的網頁，歡迎加入製作團隊)</p>
-        <button onclick="selectOption(1)">教師簡介</button>
-        <button onclick="selectOption(2)">遊戲選單</button>
-        <button onclick="selectOption(3)">大樹聊天室</button>
-        <button onclick="selectOption(4)">原班級網站</button>
-        <button onclick="selectOption(5)">原教師簡介</button>
+        <button class="custom-button" onclick="selectOption(1)">教師簡介</button>
+        <button class="custom-button" onclick="selectOption(2)">遊戲選單</button>
+        <button class="custom-button" onclick="selectOption(3)">大樹聊天室</button>
+        <button class="custom-button" onclick="selectOption(4)">原班級網站</button>
+
 </main>
     <nav>
     <select id="webpageSelect" onchange="loadWebpage()">
@@ -144,7 +167,6 @@
         <option value="gameselected.html">遊戲選單</option>
         <option value="https://machi1007.github.io/treeCHATROOM/">大樹聊天室</option>
         <option value="https://class.kh.edu.tw/21300/fpage/view/1">原班級網站</option>
-        <option value="https://b1119309.wixsite.com/2021">原教師簡介</option>
     </select>
     </nav>
 
