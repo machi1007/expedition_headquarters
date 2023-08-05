@@ -136,7 +136,25 @@
             border: none;
         }
 
+    #webpageFrame {
+      width: 100%; /* 讓iframe佔滿父容器的寬度 */
+      height: 600px; /* 設置iframe固定的高度 */
+      border: 0;
+    }
 
+    /* 媒體查詢，針對寬度小於768px的螢幕調整iframe的高度 */
+    @media (max-width: 768px) {
+      #webpageFrame {
+        height: 400px; /* 調整iframe高度為400px */
+      }
+    }
+
+    /* 媒體查詢，針對寬度小於576px的螢幕調整iframe的高度 */
+    @media (max-width: 576px) {
+      #webpageFrame {
+        height: 300px; /* 調整iframe高度為300px */
+      }
+    }
         /* 媒體查詢：螢幕寬度小於 768px */
         @media screen and (max-width: 768px) {
             #game-container {
