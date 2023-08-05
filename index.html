@@ -1,266 +1,266 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>遊戲選單</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大樹老師與探險團員的秘密基地</title>
     <style>
+        /* 在這裡添加您的CSS樣式來美化首頁 */
         body {
-            background-color: #f0f0f0;
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;
+   text-align: center;
         }
 
-        .container {
-            text-align: center;
-            margin-top: 100px;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 36px;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            text-align: center; /* 將遊戲選項置中 */
-        }
-
-        li {
-            display: inline-block; /* 讓遊戲選項在同一行顯示 */
-            margin: 10px;
-        }
-
-        a {
-            display: block;
-            font-size: 24px;
-            text-decoration: none;
-            color: #333;
-            padding: 10px;
-            border: 1px solid #333;
-            border-radius: 5px;
-            width: 200px;
-            transition: background-color 0.3s ease;
-        }
-
-        a:hover {
+        header {
             background-color: #333;
             color: #fff;
+            text-align: center;
+            padding: 1rem;
         }
 
-        /* 新增背景圖片 */
-        .background-image {
+        nav {
+            background-color: #444;
+    text-align: center; /* 將內容靠右對齊right */
+    margin-right: 20px; /* 可以根據需要調整右邊距來控制選擇欄的位置 */
+            padding: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+/*懸浮小t聊天機器人*/
+        /* 懸浮按鈕樣式 */
+        .chat-icon {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://www.crazybackground.com/wp-content/uploads/2019/12/free-abstract-background-4-vector.jpg');
-            background-size: cover;
-            opacity: 0.3;
-            z-index: -1;
-        }
-
-        /* 新增遊戲封面圖片 */
-        .game-cover {
-            width: 100px;
-            height: 100px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
             border-radius: 50%;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            margin: 0 auto 20px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            line-height: 60px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
         }
 
-        .game-cover img {
+        /* 聊天機器人彈出窗口樣式 */
+        /* 懸浮按鈕樣式 */
+        .chat-popup {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 400px;
+            height: 560px;
+            min-width: 200px;
+            min-height: 200px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            display: none;
+            resize: none; /* 移除內建的調整大小功能 */
+            overflow: hidden;
+        }
+
+        .chat-popup-header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chat-popup-body {
+            padding: 5px;
+        }
+
+        .chat-popup-resize {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            cursor: nwse-resize; /* 設置游標形狀為角落大小調整 */
+            background-color: #007BFF;
+        }
+
+        .chat-popup iframe {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            border: none;
         }
+
+
+        /* 媒體查詢：螢幕寬度小於 768px */
+        @media screen and (max-width: 768px) {
+            #game-container {
+                width: 90%;
+                padding: 10px;
+            }
+
     </style>
 </head>
 <body>
-    <!-- 背景圖片 -->
-    <div class="background-image"></div>
+    <header>
+        <h1>大樹老師與探險團員的秘密基地</h1>
 
-    <div class="container">
-        <h1>遊戲選單</h1>
-        <h2>這裡的遊戲皆是由大樹及歷屆探險團員製作哦！</h2>
-        <h3>小提醒：若想要更大的視窗，可以按右鍵點選新分頁開啟</h3>
+    </header>
+<main>
+        <h2>歡迎來到大樹老師的教學網站</h2>
+        <p>(這是由大樹老師自己製作的網頁，歡迎加入製作團隊)</p>
+        <button onclick="selectOption(1)">教師簡介</button>
+        <button onclick="selectOption(2)">遊戲選單</button>
+        <button onclick="selectOption(3)">大樹聊天室</button>
+        <button onclick="selectOption(4)">原班級網站</button>
+        <button onclick="selectOption(5)">原教師簡介</button>
+</main>
+    <nav>
+    <select id="webpageSelect" onchange="loadWebpage()">
+        <option value="">快速選單（請選擇）</option>
+        <option value="https://machi1007.github.io/profile/">教師簡介</option>
+        <option value="gameselected.html">遊戲選單</option>
+        <option value="https://machi1007.github.io/treeCHATROOM/">大樹聊天室</option>
+        <option value="https://class.kh.edu.tw/21300/fpage/view/1">原班級網站</option>
+        <option value="https://b1119309.wixsite.com/2021">原教師簡介</option>
+    </select>
+    </nav>
 
-        <ul>
-            <!-- 遊戲1 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1NjU2LnBuZw==/315x250%23c/FhMSom.png" alt="探險大富翁封面">
-                </div>
-                <a href="https://machi1007.github.io/RichTree/">探險大富翁</a>
-                <p>製作人：大樹</p>
-            </li>
+    <iframe id="webpageFrame" width="800" height="600" frameborder="0"></iframe>
 
-            <!-- 遊戲2 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1ODM2LnBuZw==/315x250%23c/pyiHcc.png" alt="大樹下樓梯封面圖片">
-                </div>
-                <a href="https://machi1007.github.io/downstairs/">大樹下樓梯</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲3 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNzU4MTI2LnBuZw==/315x250%23c/%2FbyGZ2.png" alt="大樹彈跳封面圖片">
-                </div>
-                <a href="https://machi1007.github.io/treeJump/">大樹彈跳-困難版</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲4 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="修仙世界封面圖片">
-                </div>
-                <a href="https://machi1007.github.io/AutoAdventureGame/">修仙世界</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲5 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNzMzMDM4LnBuZw==/315x250%23c/xMtMOu.png" alt="人權教室封面圖片">
-                </div>
-                <a href="https://machi123.itch.io/hrgame"target="_blank">探險日記-人權教室</a>
-                <p>製作人：59屆05探險隊員</p>
-            </li>
-
-            <!-- 遊戲6 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="江湖遊戲封面圖片">
-                </div>
-                <a href="https://machi1007.github.io/wordadventure/">江湖遊戲</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲7 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1NzY3LnBuZw==/315x250%23c/AsjvZD.png" alt="探險軍狐棋封面圖片">
-                </div>
-                <a href="https://machi123.itch.io/adventurearmyfoxchess"target="_blank">探險軍狐棋</a>
-                <p>製作人：大樹</p>
-            </li>
+    <footer>
+        <p>版權所有 &copy; 2023 by大樹</p>
+    </footer>
 
 
-            <!-- 遊戲8 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEyMTY1MzA2LnBuZw==/315x250%23c/cCUCBb.png" alt="大樹世界封面圖片">
-                </div>
-                <a href="https://machi123.itch.io/tree-world"target="_blank">大樹世界</a>
-                <p>製作人：大樹</p>
-            </li>
 
-            <!-- 遊戲9 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNjU0ODE1LnBuZw==/315x250%23c/JGq5oY.png" alt="大樹TD封面圖片">
-                </div>
-                <a href="https://machi1007.github.io/treeTD/">大樹塔防</a>
-                <p>製作人：大樹</p>
-            </li>
+    <!-- 懸浮按鈕 -->
+    <img class="chat-icon" src="https://www.16tb.com/data/images/2021/04/12853813-202104011204.jpg" alt="小t" onclick="toggleChatPopup()">
 
-            <!-- 遊戲10 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNzMzMDM4LnBuZw==/315x250%23c/xMtMOu.png" alt="金色童年封面圖片">
-                </div>
-                <a href="https://machi123.itch.io/golden-childhood"target="_blank">探險日記-金色童年</a>
-                <p>製作人：59屆05探險隊員</p>
-            </li>
-
-            <!-- 遊戲11 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="探險鬼抓人封面圖片">
-                </div>
-                <a href="https://drive.google.com/drive/folders/1FRhbQgnWWKvK5ajaPKMsbxi4L8MAnnY7"target="_blank">探險鬼抓人</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲12 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNzMzNTYzLnBuZw==/315x250%23c/Dbn9Xs.png" alt="彈球封面圖片">
-                </div>
-                <a href="https://machi123.itch.io/tree-bouncy-ball"target="_blank">大樹彈球-雙人連線</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲13 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNzE2MTE4LnBuZw==/315x250%23c/s3DY%2Fo.png" alt="大樹與小精靈封面圖片">
-                </div>
-                <a href="https://machi1007.github.io/treePACman/">大樹與小精靈</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲14 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="冒險世界封面圖片">
-                </div>
-                <a href="https://machi1007.github.io/autowordadventure/">冒險世界</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲15 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNzU4MTI2LnBuZw==/315x250%23c/%2FbyGZ2.png" alt="大樹彈跳封面圖片">
-                </div>
-                <a href="https://machi123.itch.io/tree-jump"target="_blank">大樹彈跳-簡單版</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲16 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="點火棋封面圖片">
-                </div>
-                <a href="https://drive.google.com/drive/folders/1fjDCowCRh70D833mZSdmiSNgTuCPONuj?usp=sharing"target="_blank">點火棋</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲17 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1NzgyLnBuZw==/315x250%23c/0K0OG1.png" alt="關愛大樹封面圖片">
-                </div>
-                <a href="https://machi123.itch.io/caring-for-the-lovely-tree"target="_blank">關愛大樹</a>
-                <p>製作人：大樹</p>
-            </li>
-
-            <!-- 遊戲18 -->
-            <li>
-                <div class="game-cover">
-                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="猜拳小遊戲封面圖片">
-                </div>
-                <a href="https://drive.google.com/drive/folders/19w7msHTIHMkviaRUu2NKj8zuEA4w4OZE"target="_blank">猜拳小遊戲</a>
-                <p>製作人：大樹</p>
-            </li>
-            <!-- 添加更多遊戲連結 -->
-        </ul>
+    <!-- 聊天機器人彈出窗口 -->
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-popup-header">
+        <span>小樹機器人</span>
+        <span class="chat-popup-close" onclick="hideChatPopup()">&times;</span>
     </div>
+    <div class="chat-popup-body">
+        <iframe id="chatIframe" src="https://machi1007.github.io/chatbot_st/" frameborder="0"></iframe>
+    </div>
+    <div class="chat-popup-resize" id="resizeHandle"></div>
+</div>
+
+
+
+
+
+    <script>
+
+    function selectOption(optionIndex) {
+    var selectElement = document.getElementById('webpageSelect');
+    var iframeElement = document.getElementById('webpageFrame');
+    var options = selectElement.options;
+
+    if (optionIndex >= 0 && optionIndex < options.length) {
+        selectElement.selectedIndex = optionIndex;
+        iframeElement.src = options[optionIndex].value;
+    } else {
+        // 如果指定的選項索引無效，隱藏iframe
+        selectElement.selectedIndex = -1;
+        iframeElement.src = '';
+    }
+}
+        function loadWebpage() {
+            var selectElement = document.getElementById('webpageSelect');
+            var iframeElement = document.getElementById('webpageFrame');
+            var selectedValue = selectElement.value;
+
+            // 檢查是否有選擇任何網頁
+            if (selectedValue) {
+                iframeElement.src = selectedValue;
+            } else {
+                // 如果沒有選擇任何網頁，隱藏iframe
+                iframeElement.src = '';
+            }
+        }
+
+        function toggleChatPopup() {
+            var chatPopup = document.getElementById('chatPopup');
+            if (chatPopup.style.display === 'none') {
+                chatPopup.style.display = 'block';
+            } else {
+                chatPopup.style.display = 'none';
+            }
+        }
+
+
+function adjustIframeSize() {
+    const chatIframe = document.getElementById('chatIframe');
+    const chatPopup = document.getElementById('chatPopup');
+    chatIframe.style.width = chatPopup.offsetWidth + 'px';
+    chatIframe.style.height = chatPopup.offsetHeight + 'px';
+}
+
+document.getElementById('chatPopup').style.display = 'block';
+adjustIframeSize();
+
+        const chatPopup = document.getElementById("chatPopup");
+        const resizeHandle = document.getElementById("resizeHandle");
+        const chatIframe = chatPopup.querySelector("iframe");
+
+        let isResizing = false;
+        let originalWidth = 0;
+        let originalHeight = 0;
+
+        function showChatPopup() {
+            chatPopup.style.display = "block";
+        }
+
+        function hideChatPopup() {
+            chatPopup.style.display = "none";
+        }
+
+        resizeHandle.addEventListener("mousedown", function(e) {
+            e.preventDefault();
+            isResizing = true;
+            originalWidth = chatPopup.offsetWidth;
+            originalHeight = chatPopup.offsetHeight;
+        });
+
+        document.addEventListener("mousemove", function(e) {
+            if (!isResizing) return;
+            const newWidth = originalWidth + e.clientX - resizeHandle.offsetLeft;
+            const newHeight = originalHeight + e.clientY - resizeHandle.offsetTop;
+            chatPopup.style.width = newWidth + "px";
+            chatPopup.style.height = newHeight + "px";
+            chatIframe.style.width = newWidth + "px";
+            chatIframe.style.height = newHeight + "px";
+        });
+
+        document.addEventListener("mouseup", function() {
+            isResizing = false;
+        });
+    </script>
 </body>
 </html>
