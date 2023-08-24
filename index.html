@@ -212,6 +212,7 @@ nav {
     <iframe id="webpageFrame" width="800" height="600" frameborder="0"></iframe>
 
     <footer>
+        <button class="custom-button" onclick="toggleElements()">切換顯示模式</button>
         <p>版權所有 &copy; 2023 by大樹</p>
     </footer>
 
@@ -237,6 +238,10 @@ nav {
 
 
     <script>
+// 加入兩個全局變數
+let isIframeExpanded = false;
+let originalIframeHeight = 0;
+
 function iframeZoomIn() {
     const iframe = document.getElementById('webpageFrame');
     iframe.style.width = (iframe.offsetWidth * 1.1) + 'px';
@@ -334,6 +339,37 @@ adjustIframeSize();
         document.addEventListener("mouseup", function() {
             isResizing = false;
         });
+
+
+function toggleElements() {
+    var header = document.querySelector('header');
+    var main = document.querySelector('main');
+    var nav = document.querySelector('nav');
+    var iframe = document.getElementById('webpageFrame');
+
+    if (header.style.display === 'none') {
+        header.style.display = 'block';
+        main.style.display = 'block';
+        nav.style.display = 'block';
+
+        // 如果iframe已經被放大，將它還原到原來的大小
+        if (isIframeExpanded) {
+            iframe.style.height = originalIframeHeight + 'px';
+            isIframeExpanded = false;
+        }
+    } else {
+        header.style.display = 'none';
+        main.style.display = 'none';
+        nav.style.display = 'none';
+
+        // 如果iframe還沒被放大，將它擴展到視窗的高度
+        if (!isIframeExpanded) {
+            originalIframeHeight = iframe.offsetHeight;
+            iframe.style.height = '100vh';
+            isIframeExpanded = true;
+        }
+    }
+}
     </script>
 </body>
 </html>
