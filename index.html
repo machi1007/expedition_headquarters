@@ -65,10 +65,75 @@ nav {
 }
 
 .custom-button:hover {
-  background: linear-gradient(to bottom, #45a049, #4CAF50);
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
 }
 
+.custom-buttonPT {
+  background: linear-gradient(to bottom, #de988c, #e66048);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-buttonPT:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-buttonBG {
+  background: linear-gradient(to bottom, #8ecaff, #4b53fc);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-buttonBG:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-buttonAS {
+  background: linear-gradient(to bottom, #f3bd5d, #e46d07);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-buttonAS:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
 
 /*懸浮小t聊天機器人*/
         /* 懸浮按鈕樣式 */
@@ -172,18 +237,18 @@ nav {
 <main>
         <h2>歡迎來到大樹老師的教學網站</h2>
         <p>(這是由大樹老師自己製作的網頁，歡迎加入製作團隊)</p>
-        <button class="custom-button" onclick="selectOption(1)">教師簡介</button>
-        <button class="custom-button" onclick="selectOption(2)">研究興趣</button>
+        <button class="custom-buttonBG" onclick="selectOption(1)">教師簡介</button>
+        <button class="custom-buttonBG" onclick="selectOption(2)">研究興趣</button>
         <button class="custom-button" onclick="selectOption(3)">遊戲選單</button>
         <button class="custom-button" onclick="selectOption(4)">程式選單</button>
         <button class="custom-button" onclick="selectOption(5)">教學系統</button>
         <button class="custom-button" onclick="selectOption(6)">談天說地</button>
         <button class="custom-button" onclick="selectOption(7)">大樹白板</button>
         <button class="custom-button" onclick="selectOption(8)">樹文字雲</button>
-        <button class="custom-button" onclick="selectOption(9)">教學成果</button>
-        <button class="custom-button" onclick="selectOption(10)">異想世界</button>
-        <button class="custom-button" onclick="selectOption(11)">熱門島嶼</button>
-        <button class="custom-button" onclick="selectOption(12)">網頁跳轉</button>
+        <button class="custom-button" onclick="selectOption(9)">異想世界</button>
+        <button class="custom-buttonAS" onclick="selectOption(10)">教學成果</button>
+        <button class="custom-buttonPT" onclick="selectOption(11)">熱門島嶼</button>
+        <button class="custom-buttonPT" onclick="selectOption(12)">網頁跳轉</button>
 </main>
     <nav>
     <select id="webpageSelect" onchange="loadWebpage()">
@@ -196,8 +261,8 @@ nav {
         <option value="https://machi1007.github.io/treeCHATROOM/">談天說地</option>
         <option value="https://machi1007.github.io/TreeSimpleBoard/">大樹白板</option>
         <option value="https://machi1007.github.io/TreeWordCloudMachine/">樹文字雲</option>
-        <option value="https://machi1007.github.io/TreeAS/">教學成果</option>
         <option value="https://machi1007.github.io/treenovel/">異想世界</option>
+        <option value="https://machi1007.github.io/TreeAS/">教學成果</option>
         <option value="recom.html">熱門島嶼</option>
         <option value="https://machi1007.github.io/TreeWebJump/">網頁跳轉</option>
     </select>
