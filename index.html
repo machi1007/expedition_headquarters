@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大樹老師與探險團員的秘密基地</title>
+    <style>
+        /* 在這裡添加您的CSS樣式來美化首頁 */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+nav {
+    background-color: #444;
+    text-align: center;
+    margin-right: 0; /* 移除右邊距 */
+    padding: 1rem 20px; /* 調整 padding 來保持間距 */
+}
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+.custom-button {
+  background: linear-gradient(to bottom, #ace07d, #28c437);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-button:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-buttonPT {
+  background: linear-gradient(to bottom, #de988c, #e66048);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-buttonPT:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-buttonBG {
+  background: linear-gradient(to bottom, #8ecaff, #4b53fc);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-buttonBG:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-buttonAS {
+  background: linear-gradient(to bottom, #f3bd5d, #e46d07);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-buttonAS:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-buttonAN {
+  background: linear-gradient(to bottom, #3ec839, #4d9130);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.custom-buttonAN:hover {
+  background: linear-gradient(to bottom, #b3b3b3, #979797);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+}
+        
+/*懸浮小t聊天機器人*/
+        /* 懸浮按鈕樣式 */
+        .chat-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            line-height: 60px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        /* 聊天機器人彈出窗口樣式 */
+        /* 懸浮按鈕樣式 */
+        .chat-popup {
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 400px;
+            height: 560px;
+            min-width: 200px;
+            min-height: 200px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            display: none;
+            resize: none; /* 移除內建的調整大小功能 */
+            overflow: hidden;
+        }
+
+        .chat-popup-header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .chat-popup-body {
+            padding: 5px;
+        }
+
+        .chat-popup-resize {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 10px;
+            height: 10px;
+            cursor: nwse-resize; /* 設置游標形狀為角落大小調整 */
+            background-color: #007BFF;
+        }
+
+        .chat-popup iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+    #webpageFrame {
+      width: 100%; /* 讓iframe佔滿父容器的寬度 */
+      height: 600px; /* 設置iframe固定的高度 */
+      border: 0;
+    }
+
+    /* 媒體查詢，針對寬度小於768px的螢幕調整iframe的高度 */
+    @media (max-width: 768px) {
+      #webpageFrame {
+        height: 400px; /* 調整iframe高度為400px */
+      }
+    }
+
+    /* 媒體查詢，針對寬度小於576px的螢幕調整iframe的高度 */
+    @media (max-width: 576px) {
+      #webpageFrame {
+        height: 300px; /* 調整iframe高度為300px */
+      }
+    }
+        /* 媒體查詢：螢幕寬度小於 768px */
+        @media screen and (max-width: 768px) {
+            #game-container {
+                width: 90%;
+                padding: 10px;
+            }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>大樹老師與探險團員的秘密基地</h1>
+
+    </header>
+<main>
+        <h2>歡迎來到大樹老師的教學網站</h2>
+        <p>(這是由大樹老師自己製作的網頁，歡迎加入製作團隊)</p>
+        <button class="custom-buttonBG" onclick="selectOption(1)">教師簡介</button>
+        <button class="custom-buttonBG" onclick="selectOption(2)">研究興趣</button>
+        <button class="custom-buttonAN" onclick="selectOption(3)">探險團隊</button>
+        <button class="custom-button" onclick="selectOption(4)">遊戲選單</button>
+        <button class="custom-button" onclick="selectOption(5)">程式選單</button>
+        <button class="custom-button" onclick="selectOption(6)">教學系統</button>
+        <button class="custom-button" onclick="selectOption(7)">探險小間</button>
+        <button class="custom-button" onclick="selectOption(8)">大樹白板</button>
+        <button class="custom-button" onclick="selectOption(9)">樹文字雲</button>
+        <button class="custom-buttonAS" onclick="selectOption(10)">教學成果</button>
+        <button class="custom-buttonAS" onclick="selectOption(11)">小說創作</button>
+        <button class="custom-buttonAS" onclick="selectOption(12)">密室逃脫</button>
+        <button class="custom-buttonPT" onclick="selectOption(13)">熱門島嶼</button>
+        <button class="custom-buttonPT" onclick="selectOption(14)">網頁跳轉</button>
+</main>
+    <nav>
+    <select id="webpageSelect" onchange="loadWebpage()">
+        <option value="">快速選單（請選擇）</option>
+        <option value="https://machi1007.github.io/profile/">教師簡介</option>
+        <option value="research.html">研究興趣</option>
+        <option value="https://machi1007.github.io/TreeAnnouncement/">探險團隊</option>
+        <option value="gameselected.html">遊戲選單</option>
+        <option value="otherselected.html">程式選單</option>
+        <option value="https://machi1007.github.io/TreeWebTFS/">大樹教學反饋系統</option>
+        <option value="https://machi1007.github.io/treeCHATROOM/">探險小間</option>
+        <option value="https://machi1007.github.io/TreeSimpleBoard/">大樹白板</option>
+        <option value="https://machi1007.github.io/TreeWordCloudMachine/">樹文字雲</option>
+        <option value="https://machi1007.github.io/TreeAS/">教學成果</option>
+        <option value="https://machi1007.github.io/treenovel/">小說創作</option>
+        <option value="61run.html">密室逃脫</option>
+        <option value="recom.html">熱門島嶼</option>
+        <option value="https://machi1007.github.io/TreeWebJump/">網頁跳轉</option>
+    </select>
+    <button onclick="iframeZoomIn()">放大</button>
+    <button onclick="iframeZoomOut()">縮小</button>
+    </nav>
+    <iframe id="webpageFrame" width="800" height="600" frameborder="0" src=https://machi1007.github.io/TreeWebJump/></iframe>
+
+    <footer>
+        <button class="custom-button" onclick="toggleElements()">切換顯示模式</button>
+        <p>版權所有 &copy; 2023 by大樹</p>
+    </footer>
+
+
+
+    <!-- 懸浮按鈕 -->
+    <img class="chat-icon" src="7.jpeg" alt="小t" onclick="toggleChatPopup()">
+
+    <!-- 聊天機器人彈出窗口 -->
+<div class="chat-popup" id="chatPopup">
+    <div class="chat-popup-header">
+        <span>小樹機器人</span>
+        <span class="chat-popup-close" onclick="hideChatPopup()">&times;</span>
+    </div>
+    <div class="chat-popup-body">
+        <iframe id="chatIframe" src="https://machi1007.github.io/chatbot_st/" frameborder="0"></iframe>
+    </div>
+    <div class="chat-popup-resize" id="resizeHandle"></div>
+</div>
+
+
+
+
+
+    <script>
+// 加入兩個全局變數
+let isIframeExpanded = false;
+let originalIframeHeight = 0;
+
+function iframeZoomIn() {
+    const iframe = document.getElementById('webpageFrame');
+    iframe.style.width = (iframe.offsetWidth * 1.1) + 'px';
+    iframe.style.height = (iframe.offsetHeight * 1.1) + 'px';
+}
+
+function iframeZoomOut() {
+    const iframe = document.getElementById('webpageFrame');
+    iframe.style.width = (iframe.offsetWidth * 0.9) + 'px';
+    iframe.style.height = (iframe.offsetHeight * 0.9) + 'px';
+}
+
+
+    function selectOption(optionIndex) {
+    var selectElement = document.getElementById('webpageSelect');
+    var iframeElement = document.getElementById('webpageFrame');
+    var options = selectElement.options;
+
+    if (optionIndex >= 0 && optionIndex < options.length) {
+        selectElement.selectedIndex = optionIndex;
+        iframeElement.src = options[optionIndex].value;
+    } else {
+        // 如果指定的選項索引無效，隱藏iframe
+        selectElement.selectedIndex = -1;
+        iframeElement.src = '';
+    }
+}
+        function loadWebpage() {
+            var selectElement = document.getElementById('webpageSelect');
+            var iframeElement = document.getElementById('webpageFrame');
+            var selectedValue = selectElement.value;
+
+            // 檢查是否有選擇任何網頁
+            if (selectedValue) {
+                iframeElement.src = selectedValue;
+            } else {
+                // 如果沒有選擇任何網頁，隱藏iframe
+                iframeElement.src = '';
+            }
+        }
+
+        function toggleChatPopup() {
+            var chatPopup = document.getElementById('chatPopup');
+            if (chatPopup.style.display === 'none') {
+                chatPopup.style.display = 'block';
+            } else {
+                chatPopup.style.display = 'none';
+            }
+        }
+
+
+function adjustIframeSize() {
+    const chatIframe = document.getElementById('chatIframe');
+    const chatPopup = document.getElementById('chatPopup');
+    chatIframe.style.width = chatPopup.offsetWidth + 'px';
+    chatIframe.style.height = chatPopup.offsetHeight + 'px';
+}
+
+document.getElementById('chatPopup').style.display = 'block';
+adjustIframeSize();
+
+        const chatPopup = document.getElementById("chatPopup");
+        const resizeHandle = document.getElementById("resizeHandle");
+        const chatIframe = chatPopup.querySelector("iframe");
+
+        let isResizing = false;
+        let originalWidth = 0;
+        let originalHeight = 0;
+
+        function showChatPopup() {
+            chatPopup.style.display = "block";
+        }
+
+        function hideChatPopup() {
+            chatPopup.style.display = "none";
+        }
+
+        resizeHandle.addEventListener("mousedown", function(e) {
+            e.preventDefault();
+            isResizing = true;
+            originalWidth = chatPopup.offsetWidth;
+            originalHeight = chatPopup.offsetHeight;
+        });
+
+        document.addEventListener("mousemove", function(e) {
+            if (!isResizing) return;
+            const newWidth = originalWidth + e.clientX - resizeHandle.offsetLeft;
+            const newHeight = originalHeight + e.clientY - resizeHandle.offsetTop;
+            chatPopup.style.width = newWidth + "px";
+            chatPopup.style.height = newHeight + "px";
+            chatIframe.style.width = newWidth + "px";
+            chatIframe.style.height = newHeight + "px";
+        });
+
+        document.addEventListener("mouseup", function() {
+            isResizing = false;
+        });
+
+
+function toggleElements() {
+    var header = document.querySelector('header');
+    var main = document.querySelector('main');
+    var nav = document.querySelector('nav');
+    var iframe = document.getElementById('webpageFrame');
+
+    if (header.style.display === 'none') {
+        header.style.display = 'block';
+        main.style.display = 'block';
+        nav.style.display = 'block';
+
+        // 如果iframe已經被放大，將它還原到原來的大小
+        if (isIframeExpanded) {
+            iframe.style.height = originalIframeHeight + 'px';
+            isIframeExpanded = false;
+        }
+    } else {
+        header.style.display = 'none';
+        main.style.display = 'none';
+        nav.style.display = 'none';
+
+        // 如果iframe還沒被放大，將它擴展到視窗的高度
+        if (!isIframeExpanded) {
+            originalIframeHeight = iframe.offsetHeight;
+            iframe.style.height = '100vh';
+            isIframeExpanded = true;
+        }
+    }
+}
+    </script>
+</body>
+</html>

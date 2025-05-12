@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>遊戲選單</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 100px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; /* 將遊戲選項置中 */
+        }
+
+        li {
+            display: inline-block; /* 讓遊戲選項在同一行顯示 */
+            margin: 10px;
+        }
+
+        a {
+            display: block;
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            width: 200px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        /* 新增背景圖片 */
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://www.crazybackground.com/wp-content/uploads/2019/12/free-abstract-background-4-vector.jpg');
+            background-size: cover;
+            opacity: 0.3;
+            z-index: -1;
+        }
+
+        /* 新增遊戲封面圖片 */
+        .game-cover {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin: 0 auto 20px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .game-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <!-- 背景圖片 -->
+    <div class="background-image"></div>
+
+    <div class="container">
+        <h1>遊戲選單</h1>
+        <h2>這裡的遊戲皆是由大樹及歷屆探險團員製作哦！</h2>
+        <h3>小提醒1：若想更大視窗，右鍵點選利用新分頁開啟</h3>
+        <h3>小提醒2：手機或平板則可以長按利用新分頁開啟哦</h3>
+
+        <ul>
+            <!-- 遊戲1 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1NjU2LnBuZw==/315x250%23c/FhMSom.png" alt="探險大富翁封面">
+                </div>
+                <a href="https://machi1007.github.io/RichTree/">探險大富翁</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲2 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1ODM2LnBuZw==/315x250%23c/pyiHcc.png" alt="大樹下樓梯封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/downstairs/">大樹下樓梯</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲3 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNzU4MTI2LnBuZw==/315x250%23c/%2FbyGZ2.png" alt="大樹彈跳封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/treeJump/">大樹彈跳-困難版</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲4 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="修仙世界封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/AutoAdventureGame/">修仙世界</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲5 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNzMzMDM4LnBuZw==/315x250%23c/xMtMOu.png" alt="人權教室封面圖片">
+                </div>
+                <a href="https://machi123.itch.io/hrgame"target="_blank">探險日記-人權教室</a>
+                <p>製作人：59屆05探險隊員</p>
+            </li>
+
+            <!-- 遊戲6 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="江湖遊戲封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/wordadventure/">江湖遊戲</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲7 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1NzY3LnBuZw==/315x250%23c/AsjvZD.png" alt="探險軍狐棋封面圖片">
+                </div>
+                <a href="https://machi123.itch.io/adventurearmyfoxchess"target="_blank">探險軍狐棋</a>
+                <p>製作人：大樹</p>
+            </li>
+
+
+            <!-- 遊戲8 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEyMTY1MzA2LnBuZw==/315x250%23c/cCUCBb.png" alt="大樹世界封面圖片">
+                </div>
+                <a href="https://machi123.itch.io/tree-world"target="_blank">大樹世界</a>
+                <p>製作人：大樹、歷屆探險團員</p>
+            </li>
+
+            <!-- 遊戲9 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNjU0ODE1LnBuZw==/315x250%23c/JGq5oY.png" alt="大樹TD封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/treeTD/">大樹塔防</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲10 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNzMzMDM4LnBuZw==/315x250%23c/xMtMOu.png" alt="金色童年封面圖片">
+                </div>
+                <a href="https://machi123.itch.io/golden-childhood"target="_blank">探險日記-金色童年</a>
+                <p>製作人：59屆05探險隊員</p>
+            </li>
+
+            <!-- 遊戲11 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="探險鬼抓人封面圖片">
+                </div>
+                <a href="https://drive.google.com/drive/folders/1FRhbQgnWWKvK5ajaPKMsbxi4L8MAnnY7"target="_blank">探險鬼抓人</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲12 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNzMzNTYzLnBuZw==/315x250%23c/Dbn9Xs.png" alt="彈球封面圖片">
+                </div>
+                <a href="https://machi123.itch.io/tree-bouncy-ball"target="_blank">大樹彈球-雙人連線</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲13 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNzE2MTE4LnBuZw==/315x250%23c/s3DY%2Fo.png" alt="大樹與小精靈封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/treePACman/">大樹與小精靈</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲14 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="冒險世界封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/autowordadventure/">冒險世界</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲15 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNzU4MTI2LnBuZw==/315x250%23c/%2FbyGZ2.png" alt="大樹彈跳封面圖片">
+                </div>
+                <a href="https://machi123.itch.io/tree-jump"target="_blank">大樹彈跳-簡單版</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲16 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="點火棋封面圖片">
+                </div>
+                <a href="https://drive.google.com/drive/folders/1fjDCowCRh70D833mZSdmiSNgTuCPONuj?usp=sharing"target="_blank">點火棋</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲17 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1NzgyLnBuZw==/315x250%23c/0K0OG1.png" alt="關愛大樹封面圖片">
+                </div>
+                <a href="https://machi123.itch.io/caring-for-the-lovely-tree"target="_blank">關愛大樹</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲18 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="猜拳小遊戲封面圖片">
+                </div>
+                <a href="https://drive.google.com/drive/folders/19w7msHTIHMkviaRUu2NKj8zuEA4w4OZE"target="_blank">猜拳小遊戲</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲19 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="大樹四子棋封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/treeconnectfour/">大樹四子棋</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲20 -->
+            <li>
+                <div class="game-cover">
+                    <img src="https://img.itch.zone/aW1nLzEwNDk1OTYyLnBuZw==/315x250%23c/p3eQee.png" alt="飛行大樹封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/TreeFly/">飛行大樹</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲21 -->
+            <li>
+                <div class="game-cover">
+                    <img src="3.png" alt="封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/TreeLadyoftheLake/">湖中女神</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲22 -->
+            <li>
+                <div class="game-cover">
+                    <img src="4.png" alt="封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/TreeRestaurant/">大樹飯館</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲23 -->
+            <li>
+                <div class="game-cover">
+                    <img src="2.png" alt="封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/TreeRaceHorse/">大樹賽馬</a>
+                <p>製作人：大樹</p>
+            </li>
+
+            <!-- 遊戲24 -->
+            <li>
+                <div class="game-cover">
+                    <img src="2.png" alt="封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/supercode/">終極密碼</a>
+                <p>製作人：大樹</p>
+            </li>
+            
+            <!-- 遊戲25 -->
+            <li>
+                <div class="game-cover">
+                    <img src="8.jpg" alt="封面圖片">
+                </div>
+                <a href="61run.html">密室逃脫</a>
+                <p>製作人：61屆14探險團員</p>
+            </li>
+
+            <!-- 遊戲26 -->
+            <li>
+                <div class="game-cover">
+                    <img src="2.png" alt="封面圖片">
+                </div>
+                <a href="https://machi1007.github.io/TreeWolfKill/">6114大樹狼人殺</a>
+                <p>製作人：大樹</p>
+            </li>
+            
+            <!-- 添加更多遊戲連結 -->
+        </ul>
+    </div>
+</body>
+</html>
